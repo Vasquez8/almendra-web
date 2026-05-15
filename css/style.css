@@ -1,0 +1,398 @@
+/* ========================= RESET========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #08131f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ========================= BACKGROUND EFFECTS ========================= */
+
+.blur {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.blur1 {
+  background: #22c55e;
+  top: -150px;
+  left: -100px;
+}
+
+.blur2 {
+  background: #3b82f6;
+  bottom: -150px;
+  right: -100px;
+}
+
+/* ========================= NAVBAR ========================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(8, 19, 31, 0.6);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #4ade80;
+}
+
+/* ========================= HERO ========================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 20px 60px;
+}
+
+.hero-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.hero-text span {
+  background: linear-gradient(to right, #4ade80, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #cbd5e1;
+  margin-bottom: 35px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 60px;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+  box-shadow: 0 15px 40px rgba(34, 197, 94, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+/* ========================= 3D CARD ========================= */
+
+.hero-image {
+  perspective: 1200px;
+}
+
+.card3d {
+  height: 520px;
+  border-radius: 35px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.card3d img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.overlay-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ========================= SECTIONS ========================= */
+
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.title p {
+  color: #cbd5e1;
+}
+
+/* ========================= CARDS ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 28px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* ========================= GALLERY ========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.4s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.gallery-content {
+  padding: 20px;
+}
+
+.gallery-content h3 {
+  margin-bottom: 10px;
+}
+
+.gallery-content p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+/* =========================
+TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: #22c55e;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #4ade80;
+  border: 4px solid #08131f;
+  top: 32px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::after {
+  right: -11px;
+}
+
+.right::after {
+  left: -11px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.timeline-content h3 {
+  margin-bottom: 12px;
+}
+
+.timeline-content p {
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .card3d {
+    height: 420px;
+  }
+
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 20px;
+  }
+
+  .timeline-item::after {
+    left: 19px;
+  }
+
+  .right {
+    left: 0;
+  }
+
+  .title h2 {
+    font-size: 2.2rem;
+  }
+}
