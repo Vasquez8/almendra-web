@@ -82,6 +82,11 @@ nav {
   color: #4ade80;
 }
 
+.menu-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 /* ========================= HERO ========================= */
 
 .hero {
@@ -366,8 +371,30 @@ RESPONSIVE
     text-align: center;
   }
 
+  .menu-btn {
+    display: block;
+  }
+
   .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 19, 31, 0.95);
+    backdrop-filter: blur(14px);
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
     display: none;
+  }
+
+  .links.active {
+    display: flex;
   }
 
   .card3d {

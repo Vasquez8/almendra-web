@@ -8,3 +8,11 @@ document.addEventListener("mousemove", (e) => {
 
   card.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
 });
+/* MENU MOBILE */
+
+const menuBtn = document.getElementById("menu-btn");
+const links = document.getElementById("links");
+
+menuBtn.addEventListener("click", () => {
+  links.classList.toggle("active");
+});
